@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:migrate": "npx prisma migrate dev --schema=node_modules/@matrix618/prisma-schema-package/prisma/schema.prisma"
   },
   "dependencies": {
     "@matrix618/prisma-schema-package": "^1.0.2",
