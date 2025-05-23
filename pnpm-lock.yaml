@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@matrix618/prisma-schema-package':
-        specifier: ^1.0.2
-        version: 1.0.2(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))
       '@prisma/client':
         specifier: ^6.8.2
         version: 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
@@ -486,11 +483,6 @@ packages:
 
   '@levischuck/tiny-cbor@0.2.11':
     resolution: {integrity: sha512-llBRm4dT4Z89aRsm6u2oEZ8tfwL/2l6BwpZ7JcyieouniDECM5AqNgr/y08zalEIvW3RSK4upYyybDcmjXqAow==}
-
-  '@matrix618/prisma-schema-package@1.0.2':
-    resolution: {integrity: sha512-74QVSyqjw3RCd23613q3NITnCSrY0dRdIiEPVu/5khCOvYRXEbrz/zIOaCK5z9maJYHHJOtY5TeodBfJ1Dgq7g==}
-    peerDependencies:
-      '@prisma/client': '>=6'
 
   '@napi-rs/wasm-runtime@0.2.10':
     resolution: {integrity: sha512-bCsCyeZEwVErsGmyPNSzwfwFn4OdxBj0mmv6hOFucB/k81Ojdu68RbZdxYsRQUPc9l6SU5F/cG+bXgWs3oUgsQ==}
@@ -2940,10 +2932,6 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
 
   '@levischuck/tiny-cbor@0.2.11': {}
-
-  '@matrix618/prisma-schema-package@1.0.2(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))':
-    dependencies:
-      '@prisma/client': 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
 
   '@napi-rs/wasm-runtime@0.2.10':
     dependencies:
