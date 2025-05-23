@@ -8,17 +8,12 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { authClient } from "@/lib/auth-client";
-import api from "@/lib/axios";
+
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 export default function SigninPage() {
-  const {
-    data: session,
-    isPending, //loading state
-    error, //error object
-    refetch, //refetch the session
-  } = authClient.useSession();
+  const { isPending } = authClient.useSession();
 
   const [loading, setLoading] = useState(false);
 
@@ -32,8 +27,9 @@ export default function SigninPage() {
   const signIn = async () => {
     setLoading(true);
     try {
-      const { data } = await authClient.signIn.social({
+      await authClient.signIn.social({
         provider: "github",
+        callbackURL: "/dashboard",
       });
     } catch (error) {
       console.error("Error signing in:", error);
@@ -43,14 +39,6 @@ export default function SigninPage() {
   };
   return (
     <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <Button
-        onClick={async () => {
-          await api.get(`http://localhost:3001/users/test`);
-        }}
-      >
-        Test
-      </Button>
-
       <main className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
         <Card className='max-w-md'>
           <CardHeader>
